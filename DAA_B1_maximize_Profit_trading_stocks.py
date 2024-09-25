@@ -6,12 +6,26 @@
 # Input: arr[] = {2, 3, 5} Output: 5
 # Input: arr[] = {8, 5, 1} Output: 0
 
-arr = [1, 3, 4, 7, 5, 6]
+
+# arr = [1, 3, 4, 7, 5, 6]
 # arr = [2, 3, 5]
 # arr = [8, 5, 1]
 
-num = [n for n in arr if n > arr[0]]
-if num:
-    print(max(num))
+
+nums = input("").split(',')
+
+
+def str_to_int(num1):
+    var = []
+    for char in num1:
+        num = int(char)
+        var.append(num)
+    return var
+
+
+arr = str_to_int(nums)
+result = [n for n in arr if n > arr[0]]
+if result:
+    print(max(result))
 else:
     print(0)
